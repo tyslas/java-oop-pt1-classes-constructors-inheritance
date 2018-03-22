@@ -5,7 +5,7 @@ public class Car {
   // below defines the "state" of the Car class, defined by "fields"
   private int doors; // not accessible outside of this class
   private int wheels;
-   private String model; // Strings bend the rules of Java since they are technically classes
+  private String model; // Strings bend the rules of Java since they are technically classes
   private String engine;
   private String color;
 
