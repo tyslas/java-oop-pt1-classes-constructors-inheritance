@@ -66,9 +66,9 @@ public class Car extends Vehicle {
   }
 
   @Override
-  public void move(int vel) {
+  public void move(int acc) {
     System.out.println("Car.move() called");
-    super.move(vel);
+    super.move(acc);
   }
 
   public void shift(int upDown) {

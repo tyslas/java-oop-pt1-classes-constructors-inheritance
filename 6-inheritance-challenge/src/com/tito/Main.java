@@ -31,5 +31,19 @@ public class Main {
     vette.move(20);
     vette.shift(1);
     vette.move(20);
+
+    Raptor raptor = new Raptor(5, 0,10, 0, 4, "ICE", 6, 10, 2, 450, 1, 1, "s", 1, 1, 1);
+
+    raptor.move(10);
+    raptor.shift(1);
+    raptor.turn("r");
+    raptor.turn("r");
+    raptor.turn("r");
+    raptor.move(-20);
+    raptor.shift(0);
+    raptor.shift(0);
+    raptor.shift(0);
+    raptor.move(-10);
+    raptor.turn("l");
   }
 }
