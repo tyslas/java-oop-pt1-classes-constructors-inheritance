@@ -15,35 +15,35 @@ public class Main {
 //    System.out.println("passengers: " + tank.getPassengers());
 //    System.out.println("mass transported: " + tank.getCargoMass() + "lbs");
 //
-//    tank.move(25);
+//    tank.changeVelocity(25);
 
-    Car vette = new Car("Stingray", 4, 600, 2, "ICE", 8, 6, 800, 1, 0);
+    Car vette = new Car("Sting Ray", 4, 600, 2, "ICE", 8, 6, 800, 1, 0);
     System.out.println("Vette");
     vette.shift(1);
-    vette.move(30);
+    vette.changeVelocity(30);
     vette.shift(1);
-    vette.move(30);
+    vette.changeVelocity(30);
     vette.shift(1);
-    vette.move(30);
+    vette.changeVelocity(30);
     vette.shift(1);
-    vette.move(20);
+    vette.changeVelocity(20);
     vette.shift(1);
-    vette.move(20);
+    vette.changeVelocity(20);
     vette.shift(1);
-    vette.move(20);
+    vette.changeVelocity(20);
 
     Raptor raptor = new Raptor("Dream Machine",5, 0,4, "ICE", 6, 10, 450, 1, 1,  1, 1, 1);
     System.out.println("RAPTOR");
-    raptor.move(10);
+    raptor.changeVelocity(10);
     raptor.shift(1);
     raptor.steer(90);
     raptor.steer(-30);
     raptor.steer(-120);
-    raptor.move(-20);
+    raptor.changeVelocity(-20);
     raptor.shift(0);
     raptor.shift(0);
     raptor.shift(0);
-    raptor.move(-10);
+    raptor.changeVelocity(-10);
     raptor.steer(40);
   }
 }

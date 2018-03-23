@@ -86,10 +86,8 @@ public class Car extends Vehicle {
     this.allWheelDrive = allWheelDrive;
   }
 
-  @Override
-  public void move(int vel) {
-//    System.out.println("Car.move() called");
-    super.move(vel);
+  public void changeVelocity(int accelerate) {
+    move(accelerate);
   }
 
   public void shift(int upDown) {
