@@ -80,4 +80,9 @@ public class Vehicle {
       System.out.println("steering at " + this.currDirection + " degrees from N");
     }
   }
+
+  public void stop() {
+    this.velocity = 0;
+    System.out.println("vehicle has come to a stop");
+  }
 }

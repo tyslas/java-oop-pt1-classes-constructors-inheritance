@@ -45,5 +45,6 @@ public class Main {
     raptor.shift(0);
     raptor.changeVelocity(-10);
     raptor.steer(40);
+    raptor.stop();
   }
 }
