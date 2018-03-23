@@ -9,66 +9,87 @@ public class Car extends Vehicle {
   private int horsePower;
   private int twoWheelDrive;
   private int allWheelDrive;
-  private String turning;
 
-
-  public Car(int passengers, double cargoMass, int velocity, int acceleration, int doors, String engine, int cylinders, int gears, int currGear, int horsePower, int twoWheelDrive, int allWheelDrive, String turning) {
-    super(passengers, cargoMass, velocity, acceleration);
+  public Car(String name, int passengers, double cargoMass, int doors, String engine, int cylinders, int gears, int horsePower, int twoWheelDrive, int allWheelDrive) {
+    super(name, passengers, cargoMass);
     this.doors = doors;
     this.engine = engine;
     this.cylinders = cylinders;
     this.gears = gears;
-    this.currGear = currGear;
+    this.currGear = 0;
     this.horsePower = horsePower;
     this.twoWheelDrive = twoWheelDrive;
     this.allWheelDrive = allWheelDrive;
-    this.turning = turning;
   }
 
   public int getDoors() {
     return doors;
   }
 
+  public void setDoors(int doors) {
+    this.doors = doors;
+  }
+
   public String getEngine() {
     return engine;
+  }
+
+  public void setEngine(String engine) {
+    this.engine = engine;
   }
 
   public int getCylinders() {
     return cylinders;
   }
 
+  public void setCylinders(int cylinders) {
+    this.cylinders = cylinders;
+  }
+
   public int getGears() {
     return gears;
+  }
+
+  public void setGears(int gears) {
+    this.gears = gears;
   }
 
   public int getCurrGear() {
     return currGear;
   }
 
+  public void setCurrGear(int currGear) {
+    this.currGear = currGear;
+  }
+
   public int getHorsePower() {
     return horsePower;
+  }
+
+  public void setHorsePower(int horsePower) {
+    this.horsePower = horsePower;
   }
 
   public int getTwoWheelDrive() {
     return twoWheelDrive;
   }
 
+  public void setTwoWheelDrive(int twoWheelDrive) {
+    this.twoWheelDrive = twoWheelDrive;
+  }
+
   public int getAllWheelDrive() {
     return allWheelDrive;
   }
 
-  public String getTurning() {
-    return turning;
-  }
-
-  public void decelerate(int dec) {
-
+  public void setAllWheelDrive(int allWheelDrive) {
+    this.allWheelDrive = allWheelDrive;
   }
 
   @Override
-  public void move(int acc) {
-    System.out.println("Car.move() called");
-    super.move(acc);
+  public void move(int vel) {
+//    System.out.println("Car.move() called");
+    super.move(vel);
   }
 
   public void shift(int upDown) {
@@ -92,32 +113,4 @@ public class Car extends Vehicle {
     }
   }
 
-  public void turn(String dir) {
-    switch (dir) {
-      case "l":
-        if (dir == this.turning) {
-          System.out.println("already turning left");
-        } else {
-          this.turning = dir;
-          System.out.println("the car is turning left");
-        }
-        break;
-      case "s":
-        if (dir == this.turning) {
-          System.out.println("already going straight");
-        } else {
-          this.turning = dir;
-          System.out.println("the car is going straight");
-        }
-        break;
-      case "r":
-        if (dir == this.turning) {
-          System.out.println("already turning right");
-        } else {
-          this.turning = dir;
-          System.out.println("the car is turning right");
-        }
-        break;
-    }
-  }
 }

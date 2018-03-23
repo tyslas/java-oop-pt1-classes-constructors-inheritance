@@ -11,14 +11,14 @@ public class Main {
     // As mentioned above, changing gears, increasing/decreasing speed should be included.
     // For your specific type of vehicle you will want to add something specific for that type of car
 
-    Vehicle tank = new Vehicle(4, 600, 0, 0);
-    System.out.println("passengers: " + tank.getPassengers());
-    System.out.println("mass transported: " + tank.getCargoMass() + "lbs");
+//    Vehicle tank = new Vehicle("Panzer", 4, 600);
+//    System.out.println("passengers: " + tank.getPassengers());
+//    System.out.println("mass transported: " + tank.getCargoMass() + "lbs");
+//
+//    tank.move(25);
 
-    tank.move(25);
-
-    Car vette = new Car(4, 600, 0, 0, 5, "electric", 0, 6, 0, 762, 0, 1, "s");
-
+    Car vette = new Car("Stingray", 4, 600, 2, "ICE", 8, 6, 800, 1, 0);
+    System.out.println("Vette");
     vette.shift(1);
     vette.move(30);
     vette.shift(1);
@@ -32,18 +32,18 @@ public class Main {
     vette.shift(1);
     vette.move(20);
 
-    Raptor raptor = new Raptor(5, 0,10, 0, 4, "ICE", 6, 10, 2, 450, 1, 1, "s", 1, 1, 1);
-
+    Raptor raptor = new Raptor("Dream Machine",5, 0,4, "ICE", 6, 10, 450, 1, 1,  1, 1, 1);
+    System.out.println("RAPTOR");
     raptor.move(10);
     raptor.shift(1);
-    raptor.turn("r");
-    raptor.turn("r");
-    raptor.turn("r");
+    raptor.steer(90);
+    raptor.steer(-30);
+    raptor.steer(-120);
     raptor.move(-20);
     raptor.shift(0);
     raptor.shift(0);
     raptor.shift(0);
     raptor.move(-10);
-    raptor.turn("l");
+    raptor.steer(40);
   }
 }

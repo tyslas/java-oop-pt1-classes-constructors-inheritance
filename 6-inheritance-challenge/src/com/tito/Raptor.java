@@ -5,8 +5,8 @@ public class Raptor extends Car {
   private int rollBar;
   private int engaged4WD;
 
-  public Raptor(int passengers, double cargoMass, int velocity, int acceleration, int doors, String engine, int cylinders, int gears, int currGear, int horsePower, int twoWheelDrive, int allWheelDrive, String turning, int extraTire, int rollBar, int engaged4WD) {
-    super(passengers, cargoMass, velocity, acceleration, doors, engine, cylinders, gears, currGear, horsePower, twoWheelDrive, allWheelDrive, turning);
+  public Raptor(String name, int passengers, double cargoMass, int doors, String engine, int cylinders, int gears, int horsePower, int twoWheelDrive, int allWheelDrive, int extraTire, int rollBar, int engaged4WD) {
+    super(name, passengers, cargoMass, doors, engine, cylinders, gears, horsePower, twoWheelDrive, allWheelDrive);
     this.extraTire = extraTire;
     this.rollBar = rollBar;
     this.engaged4WD = engaged4WD;

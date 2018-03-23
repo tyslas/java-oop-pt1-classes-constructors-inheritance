@@ -1,16 +1,28 @@
 package com.tito;
 
 public class Vehicle {
+  private String name;
   private int passengers;
   private double cargoMass;
   private int velocity;
   private int acceleration;
+  private int currDirection;
 
-  public Vehicle(int passengers, double cargoMass, int velocity, int acceleration) {
+  public Vehicle(String name, int passengers, double cargoMass) {
+    this.name = name;
     this.passengers = passengers;
     this.cargoMass = cargoMass;
-    this.velocity = velocity;
-    this.acceleration = acceleration;
+    this.velocity = 0;
+    this.acceleration = 0;
+    this.currDirection = 0;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public int getPassengers() {
@@ -45,10 +57,27 @@ public class Vehicle {
     this.acceleration = acceleration;
   }
 
+  public int getCurrDirection() {
+    return currDirection;
+  }
+
+  public void setCurrDirection(int currDirection) {
+    this.currDirection = currDirection;
+  }
+
   public void move(int accelerate) {
     this.acceleration = accelerate;
     this.velocity += accelerate;
     System.out.println("vehicle accelerated " + this.acceleration + "mph/s \n" +
         "and now has a velocity of " + this.velocity + "mph" + "\n");
+  }
+
+  public void steer(int degrees) {
+    if (degrees < -360 || degrees > 360) {
+      System.out.println("cannot turn more than 360 degrees");
+    } else {
+      this.currDirection += degrees;
+      System.out.println("steering at " + this.currDirection + " degrees from N");
+    }
   }
 }
